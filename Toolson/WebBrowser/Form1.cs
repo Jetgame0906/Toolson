@@ -39,11 +39,6 @@ namespace WebBrowser
             toolStripTextBox1.Text = geckoWebBrowser1.Url.ToString();
         }
 
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void geckoWebBrowser1_StatusTextChanged(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = geckoWebBrowser1.StatusText.ToString();
