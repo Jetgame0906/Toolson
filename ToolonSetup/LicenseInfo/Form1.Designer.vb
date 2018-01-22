@@ -60,9 +60,10 @@ Partial Class Form1
         Me.WebBrowser1.Location = New System.Drawing.Point(3, 53)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.ScrollBarsEnabled = False
         Me.WebBrowser1.Size = New System.Drawing.Size(433, 424)
         Me.WebBrowser1.TabIndex = 1
+        Me.WebBrowser1.Url = New System.Uri("https://raw.githubusercontent.com/GameLabClab/Toolson/master/ToolonSetup/LicenseI" &
+        "nfo/License.html", System.UriKind.Absolute)
         '
         'Form1
         '
