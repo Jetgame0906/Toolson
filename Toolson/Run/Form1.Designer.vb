@@ -53,7 +53,7 @@ Partial Class Form1
         Me.TextBox1.Location = New System.Drawing.Point(12, 62)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(469, 19)
-        Me.TextBox1.TabIndex = 2
+        Me.TextBox1.TabIndex = 0
         '
         'Label1
         '
@@ -81,13 +81,16 @@ Partial Class Form1
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(175, 16)
         Me.CheckBox1.TabIndex = 5
+        Me.CheckBox1.TabStop = False
         Me.CheckBox1.Text = "With Administrator Permittion"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Form1
         '
+        Me.AcceptButton = Me.Button2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.Button1
         Me.ClientSize = New System.Drawing.Size(493, 159)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label2)

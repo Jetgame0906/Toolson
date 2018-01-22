@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "toolson_pathservice", "tool
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code_Debug", "Code_Debug\Code_Debug.csproj", "{02123876-5F19-4215-8BCC-FF78D989BFFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser", "WebBrowser\WebBrowser.csproj", "{D518DDF7-122E-4257-8331-0150BAA5BD70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{02123876-5F19-4215-8BCC-FF78D989BFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02123876-5F19-4215-8BCC-FF78D989BFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02123876-5F19-4215-8BCC-FF78D989BFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D518DDF7-122E-4257-8331-0150BAA5BD70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D518DDF7-122E-4257-8331-0150BAA5BD70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D518DDF7-122E-4257-8331-0150BAA5BD70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D518DDF7-122E-4257-8331-0150BAA5BD70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
