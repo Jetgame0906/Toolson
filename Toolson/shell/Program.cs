@@ -10,8 +10,52 @@ namespace shell
 {
     class Program
     {
+
+        public static System.Diagnostics.ProcessStartInfo readarg = new System.Diagnostics.ProcessStartInfo();
+        public static string todefpath;
+        public static string UPath;
+        public static string UAPath;
+        public static string UName;
+        public static string UFName;
+
         static void Main(string[] args)
         {
+            try
+            {
+                todefpath = Environment.GetEnvironmentVariable("toolsonpath", EnvironmentVariableTarget.Machine);
+            }
+            catch (ArgumentNullException)
+            {
+                Console.Write("enull");
+                return;
+            }
+            readarg.FileName = todefpath + "\\readconf.exe";
+            readarg.UseShellExecute = false;
+            readarg.RedirectStandardOutput = true;
+            readarg.CreateNoWindow = true;
+
+            System.Diagnostics.Process readinf = new System.Diagnostics.Process();readinf.StartInfo = readarg;
+
+            readinf.StartInfo.Arguments = "read grobal exappsdir";readinf.Start();UAPath = readinf.StandardOutput.ReadToEnd();readinf.WaitForExit();readinf.Close();
+
+            readinf.StartInfo.Arguments = "read grobal userdir";
+            readinf.Start();
+            UPath = readinf.StandardOutput.ReadToEnd();
+            readinf.WaitForExit();
+            readinf.Close();
+
+            readinf.StartInfo.Arguments = "read grobal username";
+            readinf.Start();
+            UName = readinf.StandardOutput.ReadToEnd();
+            readinf.WaitForExit();
+            readinf.Close();
+
+            readinf.StartInfo.Arguments = "read grobal userfullname";
+            readinf.Start();
+            UFName = readinf.StandardOutput.ReadToEnd();
+            readinf.WaitForExit();
+            readinf.Close();
+
             if (args.Length == 0)
             {
                 WaitUser();
@@ -87,38 +131,17 @@ namespace shell
                 }
                 else if (command == "hello")
                 {
-                    rettext = "Hello " + userfullname + " :)";
+                    rettext = "Hello " + UFName + " :)";
                 }
-                else if (commandstr.SubstringByTextElements(0, 6) == "config")
+                else if (commandstr.SubstringByTextElements(0, 7) == "config ")
                 {
                     try
                     {
-                        if (commandstr.SubstringByTextElements(7, 4) == "edit")
-                        {
-                            if (commandstr.SubstringByTextElements(12, 16) == "conf.assist.mode")
-                            {
-                                if (commandstr.SubstringByTextElements(28, 2) == " 0")
-                                {
-                                    EasyPCAssistant.Properties.Settings.Default.assistmode = 0;
-                                    EasyPCAssistant.Properties.Settings.Default.Save();
-                                    rettext = "Set config conf.assist.mode 0";
-                                    return rettext;
-                                }
-                                else if (commandstr.SubstringByTextElements(28, 2) == " 1")
-                                {
-                                    EasyPCAssistant.Properties.Settings.Default.assistmode = 1;
-                                    EasyPCAssistant.Properties.Settings.Default.Save();
-                                    rettext = "Set config conf.assist.mode 1";
-                                    return rettext;
-                                }
-                            }
-                        }
+                        
                     }
                     catch (ArgumentOutOfRangeException)
                     {
-                        optscr showopt = new optscr();
-                        rettext = "Open config screen";
-                        showopt.Show();
+                        rettext = "Wrong Option";
                         return rettext;
                     }
                 }

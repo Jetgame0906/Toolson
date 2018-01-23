@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CAE79E7C-C532-475F-ADE5-47C3FFF7B8AB}</ProjectGuid>
+    <ProjectGuid>{F0F8A850-1C3E-412B-A168-A5F7CC59EA46}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>shell</RootNamespace>
-    <AssemblyName>shell</AssemblyName>
+    <RootNamespace>LOGGING</RootNamespace>
+    <AssemblyName>LOGGING</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="licenseinfo.lif" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

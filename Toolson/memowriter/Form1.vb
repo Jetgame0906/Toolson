@@ -1,40 +1,41 @@
 ﻿Public Class Form1
     Public toolsondir As String
-    Public RTL As Boolean = False
     Public Savedtext As String = ""
     Public Filepath As String = ""
     Public UDocPath As String
+    Public readarg As New ProcessStartInfo()
 
     Private Sub EnableRTLLayoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnableRTLLayoutToolStripMenuItem.Click
-        If RTL = False Then
+        If textForm.RightToLeft = RightToLeft.No Then
             textForm.RightToLeft = RightToLeft.Yes
-            RTL = True
             EnableRTLLayoutToolStripMenuItem.Text = "Disable RTL Layout"
-        ElseIf RTL = True Then
+        ElseIf textForm.RightToLeft = RightToLeft.Yes Then
             textForm.RightToLeft = RightToLeft.No
-            RTL = False
             EnableRTLLayoutToolStripMenuItem.Text = "Enable RTL Layout"
         End If
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        textForm.RightToLeft = RightToLeft.No
         Try
             toolsondir = Environment.GetEnvironmentVariable("toolsonpath", EnvironmentVariableTarget.Machine)
         Catch ex As ArgumentNullException
             MessageBox.Show("Toolson System not found", "Toolson Cliant")
             Close()
         End Try
-        Dim p As New System.Diagnostics.Process()
-        p.StartInfo.FileName = toolsondir + "\\readconf.exe"
-        p.StartInfo.UseShellExecute = False
-        p.StartInfo.RedirectStandardOutput = True
-        p.StartInfo.RedirectStandardInput = False
-        p.StartInfo.CreateNoWindow = True
-        p.StartInfo.Arguments = "read grobal documentdir"
-        p.Start()
-        UDocPath = p.StandardOutput.ReadToEnd()
-        p.WaitForExit()
-        p.Close()
+        readarg.FileName = toolsondir + "\\readconf.exe"
+        readarg.UseShellExecute = False
+        readarg.RedirectStandardOutput = True
+        readarg.CreateNoWindow = True
+
+        'Read Info
+        Dim readinf As New Process()
+        readinf.StartInfo = readarg
+        readinf.StartInfo.Arguments = "read grobal documentdir"
+        readinf.Start()
+        UDocPath = readinf.StandardOutput.ReadToEnd()
+        readinf.WaitForExit()
+        readinf.Close()
     End Sub
 
     Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
