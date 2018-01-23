@@ -15,14 +15,14 @@ namespace TOOLSONSIGMNGSHELL
 
         public static bool help;
 
-        public static string reason = "Unknown";
+        public static string reason = "null";
         public static int runlevelcode = -1;
         public static bool exit;
         public static bool restart;
         public static bool list;
-        public static int kill;
-        public static string purge;
-        public static string service;
+        public static int kill=-1;
+        public static string purge="null";
+        public static string service="null";
 
         public static List<string> anotherarg = new List<string>();
 
@@ -53,7 +53,20 @@ namespace TOOLSONSIGMNGSHELL
                 { "s=|service=", "Start Toolson Native or Ext. Service", v => service = v },
             };
             anotherarg = options.Parse(args);
+            if (purge != "null") { IM_stop(purge); } 
             if (help) { helpscr(options); }
+            if (restart) { }
+            if (exit) { }
+        }
+
+        static void IM_stop(string purg)
+        {
+            System.Diagnostics.Process.Start("taskkill.exe","/F /IM " + purg);
+        }
+
+        static void service_start()
+        {
+
         }
 
         static void helpscr(OptionSet options)
