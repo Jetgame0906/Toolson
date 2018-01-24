@@ -47,12 +47,12 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("MS UI Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label1.Font = New System.Drawing.Font("MS UI Gothic", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(433, 50)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Tools on License Information"
+        Me.Label1.Text = """Tools on"" License Information"
         '
         'WebBrowser1
         '
@@ -73,7 +73,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.MinimumSize = New System.Drawing.Size(455, 519)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "mkLicenseManager"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
