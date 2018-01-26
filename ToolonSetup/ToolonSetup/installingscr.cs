@@ -40,6 +40,27 @@ namespace ToolonSetup
         private void installing()
         {
             progressBar1.Maximum = allprogressinst;
+            // p1 : make Directory
+            label1.Text = "Check Install Directory";
+            if (!System.IO.Directory.Exists(instdir))
+            {
+                label2.Text = "Creating Install Directory";
+                progressBar2.Style = ProgressBarStyle.Marquee;
+                System.IO.Directory.CreateDirectory(instdir);
+            }
+            progressBar1.Value = 1;
+            label2.Text = "Checking Installation mode";
+            progressBar2.Style = ProgressBarStyle.Marquee;
+            if (System.IO.File.Exists(@".\..\ToolsonOffline"))
+            {
+                offlineInstall(System.IO.Path.GetFullPath(@".\..\ToolsonOffline"),instdir);
+            }
+            string link_pkgbin_shell = "https://github.com/GameLabClab/Toolson/blob/master/bin/shell/shell.exe?raw=true";
+        }
+
+        private void offlineInstall(string fspkgpath,string installpath)
+        {
+
         }
 
         private void start_download(string downloadurl,string todownload)
