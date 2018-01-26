@@ -50,4 +50,7 @@
     <None Include="licenseinfo.lif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /Y "$(TargetPath)" "$(SolutionDir)..\bin\$(ProjectName)\"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

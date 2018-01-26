@@ -16,5 +16,24 @@ namespace ToolonSetup
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SelectInstallDir sidir = new SelectInstallDir();
+            sidir.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (System.IO.File.Exists("lif.exe"))
+            {
+                System.Diagnostics.Process.Start("lif.exe");
+            }
+            else
+            {
+                OnlineLicense olif = new OnlineLicense();
+                olif.ShowDialog();
+            }
+        }
     }
 }

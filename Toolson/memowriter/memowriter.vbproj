@@ -120,4 +120,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /Y "$(TargetPath)" "$(SolutionDir)..\bin\$(ProjectName)\"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

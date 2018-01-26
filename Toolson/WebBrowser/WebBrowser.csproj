@@ -117,4 +117,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Geckofx45.45.0.34\build\Geckofx45.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Geckofx45.45.0.34\build\Geckofx45.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /Y "$(TargetPath)" "$(SolutionDir)..\bin\$(ProjectName)\"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
