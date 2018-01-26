@@ -1,0 +1,11 @@
+﻿sys.loader||%NULL%
+sys.shell||%NULL%
+sys.logging||%NULL%
+gsp.memowriter||%NULL%
+gsys.run||%NULL%
+sys.toolsonpathservice||%NULL%
+sys.toolsonsig1||%NULL%
+gsp.browser||%NULL%
+gsys.shell||%NULL%
+sys.pkgmng||%NULL%
+gsys.pkgmgr||%NULL%
