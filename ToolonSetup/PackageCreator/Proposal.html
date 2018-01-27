@@ -1,0 +1,115 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta />
+        <title>Tools on package file Proposal</title>
+        <style type="text/css">
+            html {
+                width: 100%;
+                background-color: darkgray;
+            }
+
+            body {
+                margin-left: 15%;
+                margin-right: 15%;
+            }
+
+            .code {
+                margin-left: 18px;
+                margin-right: 18px;
+                background-color: black;
+                color: white;
+                border-radius: 3px;
+            }
+
+            .codee {
+                font-size:13px;
+                margin-left: 23px;
+                margin-right: 23px;
+            }
+
+            .btext1 {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            .btext2 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .btext3 {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+
+            #indoc {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            #doc {
+                width: 100%;
+                background-color: white;
+            }
+
+            .var{
+                color:green;
+            }
+
+            .warn{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="doc">
+            <header>
+                <div id="header" align="center">
+                    <br />
+                    <h1>Tools on package file Proposal</h1>
+                    <h2>Game Lab Clab</h2>
+                    <hr />
+                </div>
+            </header>
+            <div id="indoc">
+                <h2>Introduction</h2>
+                <p class="btext1">Thank you for using our products this time.<br />Now we will teach you how to make tools on pkg file</p>
+
+                <h2>How to make application for tools on</h2>
+                <p class="btext1">Tools on is work on Windows (more of Vista) so, You can use nomal exe file.<br />But If you want to add tools on application launcher, You have to make Tools on package installer file (pkg file)<br />Way of make pkg file at below.</p>
+
+                <h2>How to make pkg file</h2>
+                <p class="btext1">Tools on package installer file is can make easiry.<br />You can make pkg file 2 way.</p>
+                <h3 class="btext1">Way of use Package Creator</h3>
+                <p class="btext2">This way is more easier than other way.<br />We are publish PackageCreator.<br />Now we will show you how to use that.</p>
+                <h4 class="btext2">Make pkg project</h4>
+                <p class="btext3">First. You have to make pkg project directory.<br />Follow the way in below.</p>
+                <a class="codee">Tools on Developper shell :</a><br /><div class="code">&#x3E;pkgcreate new (Package name)</div>
+                <p class="btext3">Then project will be make at your current directory</p>
+                <h4 class="btext2">Config install setting</h4>
+                <p class="btext3">Next. You have to edit config file. Don't worry. It's so Easy.</p>
+                <p class="btext3">There are three configuretion file in pkg project directory</p>
+                <ul>
+                    <li>ilcfg.pkgcfg (Application Setting system Configuration)</li>
+                    <li>pkgcfg.pkgcfg (Application Installing location Configuration)</li>
+                    <li>pkgname.pkgcfg (Application Information Configuration)</li>
+                </ul>
+                <p class="btext3">First. You have to write pkgname.pkgcfg like below example</p>
+                <a class="codee">pkgname.pkgcfg (Example) :</a><br /><div class="code">name:(<a class="var">Your application name</a> - <a class="warn">Don't Use ' : ' in value</a>)<BR />version:(<a class="var">Your application version</a> - <a class="warn">Don't Use ' : ' in value</a>)</div>
+                <p class="btext3">Secound. You have to write ilcfg.pkgcfg like below example</p>
+                <a class="codee">ilcfg.pkgcfg (Example) :</a><br /><div class="code">gcfile:<a class="var">(Global Config File name)</a><BR />ncfile:<a class="var">(Naitive Config File name)</a></div>
+                <p class="btext3">Third. You have to write pkgcfg.pkgcfg like below example</p>
+                <a class="codee">pkgcfg.pkgcfg (Example) :</a><br /><div class="code"><a class="var">(File name in "bin" Directory)</a>:<a class="var">(Filename of put to "Application dir\Your application's name")</a><br /><a class="var">~ each file in bin directory ~</a></div>
+                <p class="btext3">(Optional). You can write License.html (You have to optimize for IE7 or Firefox Gecko45 )</p>
+            </div>
+            <footer>
+                <br /><hr />
+                <div align="center" style="color:gray;">
+                    <a>Copyright (c) 2018 Game Lab Clab</a><br />
+                    <a>Copyright (c) 2017 mkaraki</a><br /><br />
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

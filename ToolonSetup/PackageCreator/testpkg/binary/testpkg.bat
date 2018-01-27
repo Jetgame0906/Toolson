@@ -1,0 +1,2 @@
+echo Testpkg
+pause

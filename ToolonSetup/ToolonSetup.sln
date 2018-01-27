@@ -9,6 +9,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LicenseInfo", "LicenseInfo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProglamManager", "ProglamManager\ProglamManager.csproj", "{02BD127A-14DC-42E1-B6A9-BBABFA80B837}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageCreator", "PackageCreator\PackageCreator.csproj", "{E8B293EB-1835-4A15-BC32-6A0E3E6D8990}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{02BD127A-14DC-42E1-B6A9-BBABFA80B837}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02BD127A-14DC-42E1-B6A9-BBABFA80B837}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02BD127A-14DC-42E1-B6A9-BBABFA80B837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8B293EB-1835-4A15-BC32-6A0E3E6D8990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8B293EB-1835-4A15-BC32-6A0E3E6D8990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8B293EB-1835-4A15-BC32-6A0E3E6D8990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8B293EB-1835-4A15-BC32-6A0E3E6D8990}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
