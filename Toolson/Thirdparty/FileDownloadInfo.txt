@@ -1,8 +1,0 @@
-Apache 2.4.29 Win64 VC15 (by ApacheLounge)
-http://www.apachelounge.com/download/VC15/binaries/httpd-2.4.29-Win64-VC15.zip
-
-PHP 7.2.1 Win64 VC15 (by PHP for Windows)
-http://windows.php.net/downloads/releases/php-7.2.1-Win32-VC15-x64.zip
-
-Ruby(installer) 2.5.0-1 x64 (by RubyInstaller)
-https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.0-1/rubyinstaller-2.5.0-1-x64.7z
