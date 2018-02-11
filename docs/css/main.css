@@ -37,6 +37,30 @@ div#footerA {
     margin-right:15%;  
 }
 .bottom_cright{
-	color:gray;
-	text-align:center;
+    color:gray;
+    text-align:center;
+}
+.code {
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+}
+.codee {
+    font-size: 13px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#indoc {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#doc {
+    width: 100%;
+    background-color: white;
+}
+.var {
+    color: green;
+}
+.warn {
+    color: red;
 }
